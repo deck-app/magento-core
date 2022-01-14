@@ -1,0 +1,17 @@
+version: '3'
+services:
+  magento:
+    build:
+      context: '${BACK_END}'
+      dockerfile: 'Dockerfile-${PHP_VERSION}'
+      args:
+        - 'BACK_END=${BACK_END}'
+        - 'DISPLAY_PHPERROR=${DISPLAY_PHPERROR}'
+        - 'XDEBUG=${XDEBUG}'
+        - 'PHP_VERSION=${PHP_VERSION}'
+        - 'MAGENTO_INSTALL=${MAGENTO_INSTALL}'
+    volumes:
+      - '${APP_CODE_PATH_HOST}:${APP_CODE_PATH_MAGENTO}${APP_CODE_CONTAINER_FLAG}'
+    ports:
+      - '${MAGENTO_HOST_HTTP_PORT}:80'
+volumes: {}

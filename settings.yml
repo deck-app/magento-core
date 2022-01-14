@@ -1,0 +1,78 @@
+#User defined
+user:
+  back_end:
+    label:
+      Backend
+    hint:
+      Select a backend from the list above
+    type:
+      select
+    values:
+      - apache
+      - nginx
+    target:
+      BACK_END
+  # php_version:
+  #   label:
+  #     PHP version
+  #   hint:
+  #     Select a PHP version from the list above
+  #   type:
+  #     select
+  #   values:
+  #     - 5.6
+  #     - 5.7
+  #     - 7.2
+  #     - 8.1
+  #   target:
+  #     PHP_VERSION
+
+  # install_xdebug:
+  #   label:
+  #     Install XDEBUG?
+  #   type:
+  #     checkbox
+  #   hint:
+  #     Check to enable XDEBUG installation
+  #   target:
+  #     INSTALL_XDEBUG
+  # mysql_version:
+  #   label:
+  #     MySQL version
+  #   hint:
+  #     Select MySQL version
+  #   type:
+  #     select
+  #   values:
+  #     - "5.0"
+  #     - "7.0"
+  #   target:
+  #     MYSQL_VERSION
+
+  MariaDB_version:
+    label:
+      MariaDB version
+    hint:
+      Select a MariaDB version from the list above
+    type:
+      select
+    values:
+      - latest
+      - 10.7
+    target:
+      MARIADB_VERSION
+
+#System defaults
+system:
+  show_localpath_selector:
+    true
+  #For collecting and storing DB in .env
+  #db/user/password
+  db_credentials:
+    true
+  #Generate public ports for the docker image
+  ports:
+    http:
+      MAGENTO_HTTP_PORT
+    others:
+      - MYSQL_PORT
