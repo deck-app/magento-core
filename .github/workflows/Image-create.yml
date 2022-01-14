@@ -28,4 +28,4 @@ jobs:
 
       - uses: actions/checkout@v2
       - name: Build Container image
-        run: docker buildx build --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x --build-arg PHP_VERSION=7.3,BACK_END=nginx --tag ghcr.io/deck-app/magento:v2.3 . --push
+        run: docker buildx build --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x --build-arg DISPLAY=on,XDEBUG=true --tag ghcr.io/deck-app/magento:v2.3 . --push
