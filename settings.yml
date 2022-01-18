@@ -1,17 +1,5 @@
 #User defined
 user:
-  back_end:
-    label:
-      Backend
-    hint:
-      Select a backend from the list above
-    type:
-      select
-    values:
-      - apache
-      - nginx
-    target:
-      BACK_END
   # php_version:
   #   label:
   #     PHP version
@@ -49,18 +37,17 @@ user:
   #   target:
   #     MYSQL_VERSION
 
-  MariaDB_version:
-    label:
-      MariaDB version
-    hint:
-      Select a MariaDB version from the list above
-    type:
-      select
-    values:
-      - latest
-      - 10.7
-    target:
-      MARIADB_VERSION
+  # customize_server_root_path:
+  #   label:
+  #     Server root
+  #   type:
+  #     input
+  #   values:
+  #     /var/www/html/app/design/frontend/mytheme/default
+  #   hint:
+  #     Server document root
+  #   target:
+  #     DOCUMENT_ROOT
 
 #System defaults
 system:
